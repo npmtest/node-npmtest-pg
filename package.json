@@ -1,1 +1,40 @@
-{     "devDependencies": {         "pg": "*",         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmtest-pg",     "homepage": "https://github.com/npmtest/node-npmtest-pg",     "repository": {         "type": "git",         "url": "https://github.com/npmtest/node-npmtest-pg.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "#### test coverage for  [pg (v6.1.5)](http://github.com/brianc/node-postgres)  [![npm package](https://img.shields.io/npm/v/npmtest-pg.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-pg) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-pg.svg)](https://travis-ci.org/npmtest/node-npmtest-pg)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "pg": "*",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmtest/node-npmtest-pg",
+    "keywords": [
+        "coverage",
+        "test",
+        "pg"
+    ],
+    "license": "MIT",
+    "main": "lib.npmtest_pg.js",
+    "name": "npmtest-pg",
+    "nameAlias": "npmtest_pg",
+    "nameOriginal": "npmtest-pg",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmtest/node-npmtest-pg.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "npm install \"kaizhu256/node-utility2#alpha\" && utility2 shDeployHeroku",
+        "postinstall": "[ ! -f npm_scripts.sh ] || ./npm_scripts.sh postinstall",
+        "start": "PORT=${PORT:-8080} utility2 start test.js",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "0.0.3"
+}
