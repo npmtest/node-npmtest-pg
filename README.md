@@ -1,6 +1,6 @@
 # npmtest-pg
 
-#### test coverage for  [pg (v6.1.5)](http://github.com/brianc/node-postgres)  [![npm package](https://img.shields.io/npm/v/npmtest-pg.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-pg) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-pg.svg)](https://travis-ci.org/npmtest/node-npmtest-pg)
+#### basic test coverage for  [pg (v6.1.5)](http://github.com/brianc/node-postgres)  [![npm package](https://img.shields.io/npm/v/npmtest-pg.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-pg) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-pg.svg)](https://travis-ci.org/npmtest/node-npmtest-pg)
 
 #### PostgreSQL client - pure javascript & libpq with the same API
 
@@ -10,7 +10,7 @@
 |--:|:--|
 | coverage : | [![istanbul-coverage](https://npmtest.github.io/node-npmtest-pg/build/coverage.badge.svg)](https://npmtest.github.io/node-npmtest-pg/build/coverage.html/index.html)|
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-pg/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-pg/build/test-report.html)|
-| build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-pg/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-pg/tree/gh-pages/build)|
+| test-server-github : | [![github.com test-server](https://npmtest.github.io/node-npmtest-pg/GitHub-Mark-32px.png)](https://npmtest.github.io/node-npmtest-pg/build/app/index.html) | | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-pg/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-pg/tree/gh-pages/build)|
 
 - [https://npmtest.github.io/node-npmtest-pg/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-pg/build/coverage.html/index.html)
 
@@ -95,7 +95,8 @@
         "changelog": "npm i github-changes && ./node_modules/.bin/github-changes -o brianc -r node-postgres -d pulls -a -v",
         "test": "make test-all connectionString=postgres://postgres@localhost:5432/postgres"
     },
-    "version": "6.1.5"
+    "version": "6.1.5",
+    "bin": {}
 }
 ```
 
